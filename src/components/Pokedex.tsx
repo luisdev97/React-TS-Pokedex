@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import PokemonImage from './PokemonImage/PokemonImage';
 import pokedex from './../pokedex3.png';
+import pokemonService from '../services/PokemonServices';
 
 const Pokedex = () => {
 
-  const [ selectedPokemon, setSelectedPokemon ] = useState('Bulbasaur');
+  const [ selectedPokemon, setSelectedPokemon ] = useState('bulbasaur');
 
   useEffect(() => {
-    console.log(selectedPokemon);
+    pokemonService.getPokemon(selectedPokemon);
   },[selectedPokemon])
 
   return (
@@ -18,7 +19,7 @@ const Pokedex = () => {
 
          <map name="pokedex">
 
-            <area shape="RECTANGLE" alt="crucetaSuperior" coords="277, 397, 300, 426" onClick={() => setSelectedPokemon('cruceta superior')}/>
+            <area shape="RECTANGLE" alt="crucetaSuperior" coords="277, 397, 300, 426" onClick={() => setSelectedPokemon('charmander')}/>
             
             <area shape="RECTANGLE" alt="crucetaIzquierda" coords="245, 426, 277, 447" />
 
