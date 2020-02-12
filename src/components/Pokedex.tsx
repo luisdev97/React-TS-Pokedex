@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PokemonImage from './PokemonImage/PokemonImage';
 import pokedex from './../pokedex3.png';
 
 const Pokedex = () => {
@@ -13,7 +14,7 @@ const Pokedex = () => {
     <div className="row">
       <div className="container mt-5">
          <img src={ pokedex } alt="imagen" useMap="#pokedex"/>
-
+         <PokemonImage/>
 
          <map name="pokedex">
 

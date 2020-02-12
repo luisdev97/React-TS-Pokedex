@@ -1,9 +1,10 @@
 import React from 'react';
+import './index.css';
 
 const Pokemon = () => {
     return (
-        <div>
-            Pokemon
+        <div className="imageContainer">
+            
         </div>
     );
 };
