@@ -5,7 +5,7 @@ interface Pokemon {
     name: string;
     weight: number;
     abilities: [];
-
+    sprites: {};
 }
 
 export default Pokemon;

@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './index.css';
 
-const Pokemon = () => {
+
+
+const PokemonImage = ({ sprites } : PokemonImageProps) => {
+   console.log(sprites);
     return (
         <div className="imageContainer">
-            
+            <img src="" alt=""/>
         </div>
     );
 };
 
-export default Pokemon;
+type PokemonImageProps = {
+    sprites: {}
+}
+
+export default PokemonImage;

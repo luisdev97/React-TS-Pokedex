@@ -12,22 +12,22 @@ class PokemonService {
     }
     
     public static async getPokemon(idPokemon: number): Promise<Pokemon>{
-        console.log(idPokemon);
+        console.log('pidiendo pokemon');
         const res: Object = await axios.get(this.END_POINT + idPokemon);
         const pokemon: Pokemon = this.transformPokemonData(res);
-        console.log(pokemon);
         return pokemon;
     }
 
     public static transformPokemonData(data: any): any {
-        const { id, order, name, types, weight, abilities } = data.data;
+        const { id, order, name, types, weight, abilities, sprites } = data.data;
         return {
             id,
             order,
             name,
             types,
             weight,
-            abilities
+            abilities,
+            sprites
         } 
     }
 
