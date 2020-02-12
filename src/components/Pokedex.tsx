@@ -5,7 +5,7 @@ import pokemonService from '../services/PokemonServices';
 
 const Pokedex = () => {
 
-  const [ selectedPokemon, setSelectedPokemon ] = useState('bulbasaur');
+  const [ selectedPokemon, setSelectedPokemon ] = useState(1);
 
   useEffect(() => {
     pokemonService.getPokemon(selectedPokemon);
@@ -19,9 +19,9 @@ const Pokedex = () => {
 
          <map name="pokedex">
 
-            <area shape="RECTANGLE" alt="crucetaSuperior" coords="277, 397, 300, 426" onClick={() => setSelectedPokemon('charmander')}/>
+            <area shape="RECTANGLE" alt="crucetaSuperior" coords="277, 397, 300, 426" onClick={() => setSelectedPokemon(selectedPokemon - 1)}/>
             
-            <area shape="RECTANGLE" alt="crucetaIzquierda" coords="245, 426, 277, 447" />
+            <area shape="RECTANGLE" alt="crucetaIzquierda" coords="245, 426, 277, 447" onClick={() => setSelectedPokemon(selectedPokemon + 1)}/>
 
             <area shape="RECTANGLE" alt="crucetaInferior"coords="278, 448, 300, 480" />
 

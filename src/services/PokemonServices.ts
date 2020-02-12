@@ -1,4 +1,6 @@
 import axios from 'axios';
+import Pokemon from '../models/Pokemon';
+
 
 
 class PokemonService {
@@ -9,9 +11,24 @@ class PokemonService {
 
     }
     
-    public static async getPokemon(pokemonName: string){
-        const pokemon = await axios.get(this.END_POINT + pokemonName);
+    public static async getPokemon(idPokemon: number): Promise<Pokemon>{
+        console.log(idPokemon);
+        const res: Object = await axios.get(this.END_POINT + idPokemon);
+        const pokemon: Pokemon = this.transformPokemonData(res);
         console.log(pokemon);
+        return pokemon;
+    }
+
+    public static transformPokemonData(data: any): any {
+        const { id, order, name, types, weight, abilities } = data.data;
+        return {
+            id,
+            order,
+            name,
+            types,
+            weight,
+            abilities
+        } 
     }
 
 }
