@@ -3,36 +3,34 @@ import PokemonImage from './PokemonImage/PokemonImage';
 import pokedex from './../pokedex3.png';
 import pokemonService from '../services/PokemonServices';
 import Pokemon from '../models/Pokemon';
+import PokemonDetail from './PokemonDetail/PokemonDetail';
+
 
 const Pokedex: React.FC = () => {
 
-  const [ selectedPokemon, setSelectedPokemon ] = useState(1);
-  const [ pokemonData, setPokemonData ] = useState({ sprites: {}});
+  const [ selectedPokemon, setSelectedPokemon ] = useState<number>(1);
+  const [ pokemonData, setPokemonData ] = useState<Pokemon>({sprites: {}} as Pokemon);
 
   useEffect(() => {
-    //Asignar tipo pokemon
+    changeSelectedPokemon();
+  },[selectedPokemon])
+
+  const changeSelectedPokemon = () => {
     if(selectedPokemon < 1)
       setSelectedPokemon(1);
-
-    if(selectedPokemon > 0){
+    else{
       pokemonService.getPokemon(selectedPokemon).then(res => {
-        console.log(res);
         setPokemonData(res);
       });
     }
-      
-      
-    
-    
-
-    
-  },[selectedPokemon])
+  }
 
   return (
     <div className="row">
       <div className="container mt-5">
          <img src={ pokedex } alt="imagen" useMap="#pokedex"/>
-         <PokemonImage sprites={pokemonData.sprites}/>
+         <PokemonImage sprites={ pokemonData.sprites }/>
+         <PokemonDetail pokemon={ pokemonData }/>
 
          <map name="pokedex">
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './index.css';
 
 
@@ -7,13 +7,13 @@ const PokemonImage = ({ sprites } : PokemonImageProps) => {
    console.log(sprites);
     return (
         <div className="imageContainer">
-            <img src="" alt=""/>
+            <img className="pokemonImage mb-2" src={sprites.front_default} alt=""/>
         </div>
     );
 };
 
 type PokemonImageProps = {
-    sprites: {}
+    sprites: any
 }
 
 export default PokemonImage;

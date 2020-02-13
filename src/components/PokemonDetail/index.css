@@ -1,0 +1,27 @@
+.detailContainer{
+    top: 27%;
+    right: 15.55%;
+    width: 16%;
+    height: 39%;
+    background-color: purple;
+    position: absolute;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.column {
+    margin: 0 auto;
+    border: 1px solid black;
+    background: yellow;
+    width: 90%;
+}
+
+.nameContainer {
+    background: #032d28;
+    margin-top: 7.5%;
+    padding-top: 1%;
+    height: 80%;
+    border-radius: 0.5em;
+
+}
