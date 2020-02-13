@@ -1,19 +1,21 @@
 .detailContainer{
     top: 27%;
-    right: 15.55%;
+    /*right: 15.55%; para testear y probar el grid*/
+    right: 32.25%;
     width: 16%;
-    height: 39%;
-    background-color: purple;
+    height: 38%;
+    /*background-color: purple; para testear y probar el grid*/
     position: absolute;
     border-radius: 1em;
     display: flex;
     flex-direction: column;
+    
 }
 
 .column {
     margin: 0 auto;
-    border: 1px solid black;
-    background: yellow;
+    /*border: 1px solid black; para testear y probar el grid*/
+    /*background: yellow; para testear y probar el grid*/
     width: 90%;
 }
 
@@ -24,14 +26,16 @@
     padding-top: 1%;
     height: 80%;
     border-radius: 0.5em;
+    border: 1px solid black;
+
 }
 
 .smallDetailsContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;    
-    background: red;
-    margin-top: 22%;
+    /*background: red;* para testear y probar el grid*/
+    margin-top: 23.3%;
 }
 
 .smallDetail{

@@ -13,18 +13,19 @@ const PokemonDetail = ({ pokemon }: PokemonDetailProps) => {
                 </div>
 
                 <div className="col mt-1 column">
-                    S
+                    
                 </div>
 
                 <div className="col mt-1 column">
                     
                     <div className="row smallDetailsContainer">
-                        <div className="col-5 smallDetail">
-                            S
-                        </div>
 
                         <div className="col-5 smallDetail">
-                            S
+                            
+                        </div>
+
+                        <div className="col-5 smallDetail text-white font-weight-bold">
+                            # { pokemon.id && pokemon.id }
                         </div>
 
                     </div>
