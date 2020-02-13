@@ -4,7 +4,6 @@ import './index.css';
 
 
 const PokemonImage = ({ sprites } : PokemonImageProps) => {
-   console.log(sprites);
     return (
         <div className="imageContainer">
             <img className="pokemonImage mb-2" src={sprites.front_default} alt=""/>

@@ -18,10 +18,26 @@
 }
 
 .nameContainer {
+    font-family: Georgia, Cambria, Times, "Times New Roman";
     background: #032d28;
     margin-top: 7.5%;
     padding-top: 1%;
     height: 80%;
     border-radius: 0.5em;
+}
 
+.smallDetailsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;    
+    background: red;
+    margin-top: 22%;
+}
+
+.smallDetail{
+    background-color: #032d28;
+    border: 1px solid black;
+    border-radius: 0.4em;
+    padding-top: 3.5%;
+    padding-bottom: 3.5%;
 }

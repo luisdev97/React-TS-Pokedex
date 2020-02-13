@@ -8,7 +8,7 @@ const PokemonDetail = ({ pokemon }: PokemonDetailProps) => {
 
                 <div className="col mt-1 column" >
                     <div className="nameContainer">
-                        <h2 className="text-white mt-4">{ pokemon.name }</h2>
+                        {pokemon.name && <h2 className="text-white mt-4">{ pokemon.name.toUpperCase() }</h2>}
                     </div>
                 </div>
 
@@ -17,7 +17,17 @@ const PokemonDetail = ({ pokemon }: PokemonDetailProps) => {
                 </div>
 
                 <div className="col mt-1 column">
-                    S
+                    
+                    <div className="row smallDetailsContainer">
+                        <div className="col-5 smallDetail">
+                            S
+                        </div>
+
+                        <div className="col-5 smallDetail">
+                            S
+                        </div>
+
+                    </div>
                 </div>
 
         </div>

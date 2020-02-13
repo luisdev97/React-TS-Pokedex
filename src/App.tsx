@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Pokedex from './components/Pokedex';
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <div className="App">
         <Header/>
