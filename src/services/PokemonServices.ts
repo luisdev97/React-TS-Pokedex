@@ -7,12 +7,8 @@ class PokemonService {
 
     private static END_POINT: string = "https://pokeapi.co/api/v2/pokemon/";
 
-    public static getPokemonList(){
-
-    }
     
     public static async getPokemon(idPokemon: number): Promise<Pokemon>{
-        console.log('pidiendo pokemon');
         const res: Object = await axios.get(this.END_POINT + idPokemon);
         const pokemon: Pokemon = this.transformPokemonData(res);
         return pokemon;

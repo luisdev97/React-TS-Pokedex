@@ -4,6 +4,7 @@ import pokedex from './../pokedex3.png';
 import pokemonService from '../services/PokemonServices';
 import Pokemon from '../models/Pokemon';
 import PokemonDetail from './PokemonDetail/PokemonDetail';
+import AudioService from '../services/AudioService';
 
 
 const Pokedex: React.FC = () => {
@@ -16,11 +17,16 @@ const Pokedex: React.FC = () => {
   },[selectedPokemon])
 
   const changeSelectedPokemon = () => {
-    if(selectedPokemon < 1)
+
+
+    if(selectedPokemon < 1){
       setSelectedPokemon(1);
+    }
     else{
       pokemonService.getPokemon(selectedPokemon).then(res => {
         setPokemonData(res);
+        AudioService.playAudio(`/assets/cries/${res.id}.mp3`);
+      
       });
     }
   }
@@ -29,6 +35,7 @@ const Pokedex: React.FC = () => {
     <div className="row">
       <div className="container mt-5">
          <img src={ pokedex } alt="imagen" useMap="#pokedex"/>
+
          <PokemonImage sprites={ pokemonData.sprites }/>
          <PokemonDetail pokemon={ pokemonData }/>
 
